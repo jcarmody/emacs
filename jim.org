@@ -1,0 +1,5 @@
+* TODO get this working
+
+* diary
+** <2025-08-21 Thu>
+*** trying emacs on my chromebook
