@@ -27,6 +27,10 @@
 (setq org-log-done 'time)
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c C-x C-i") 'org-clock-in)
+(global-set-key (kbd "C-c C-x C-o") 'org-clock-out)
+(global-set-key (kbd "C-c C-x C-x") 'org-clock-cancel)
+(global-set-key (kbd "C-c C-x C-r") 'org-clock-report)
 (setq org-capture-templates
       '(("t" "Task" entry
          `(file+headline ,(concat oneDrive "tasks.org") "Inbox")
