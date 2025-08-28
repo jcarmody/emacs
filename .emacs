@@ -2,22 +2,19 @@
 ; Enable Org-mode
 (require 'org)
 
-; get OneDrive folder & set default directories
-(if (file-exists-p "~/OneDrive - Raytheon Technologies/OrgMode/")
-    (setq oneDrive "~/OneDrive - Raytheon Technologies/OrgMode/")
-  (setq oneDrive "~/OneDrive - RTX/OrgMode/")
-  )
-(setq default-directory oneDrive)
-(setq org-directory oneDrive)
-; move backup files one level deeper
-(setq backup-directory-alist
-      `((".*" . ,(concat org-directory "backups/"))))
-;; Enable agenda view and list files with agendas
-(setq org-agenda-files (list (concat oneDrive "jcarmody.org")
-			     (concat oneDrive "tasks.org")
-			     (concat oneDrive "m3k.org")
-			     (concat oneDrive "M23K_transfer.org")))
+;; set computer-specific variables
+(when (string-equal (system-name) "USM107864")
+  (setq oneDrive "~/OneDrive - Raytheon Technologies/OrgMode/")
+  (setq default-directory oneDrive)
+  (setq org-directory oneDrive)
+  (setq backup-directory-alist `((".*" . ,(concat org-directory "backups/"))))
+  (setq org-agenda-files (list (concat oneDrive "jcarmody.org")
+			       (concat oneDrive "tasks.org")
+			       (concat oneDrive "m3k.org")
+			       (concat oneDrive "M23K_transfer.org"))))
+
 ;; Optional: Better visuals
+(global-visual-line-mode)
 (setq org-startup-indented t)
 (setq org-startup-folded t)
 (setq org-todo-keywords
