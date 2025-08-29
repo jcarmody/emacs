@@ -55,11 +55,11 @@
 (setq org-log-done 'time)
 (setq org-capture-templates
       '(("t" "Task" entry
-         `(file+headline ,(concat default-directory "tasks.org") "Inbox")
+         (file+headline "tasks.org" "Inbox")
          "* TODO %?\n  :PROPERTIES:\n  :CREATED: %U\n  :END:\n  SCHEDULED: %^t\n  DEADLINE: %^d\n")
         ("n" "Note" entry
          (file+headline org-default-notes-file "Notes")
-         "* %u   %?"))) ;; "* %?\n  %u\n  %i\n  %a"
+         "* %u    %?"))) ;; "* %?\n  %u\n  %i\n  %a"
 ;;
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c a") 'org-agenda)
