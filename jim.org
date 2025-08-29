@@ -1,5 +1,2 @@
-* DONE get this working on the chromebook
+* DONE get Emacs org-mode working on the chromebook
 CLOSED: [2025-08-28 Thu 19:31]
-* diary
-** <2025-08-21 Thu>
-*** trying emacs on my chromebook

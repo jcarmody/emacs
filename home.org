@@ -17,4 +17,5 @@ SCHEDULED: <2025-08-31 Sun>
 * TODO find/create Fidelity account
 SCHEDULED: <2025-08-31 Sun>
 
-* TODO 
+* TODO install ceiling fan in pantry room
+SCHEDULED: <2025-08-30 Sat>
